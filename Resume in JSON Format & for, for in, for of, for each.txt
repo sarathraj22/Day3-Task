@@ -1,0 +1,102 @@
+// resume JSON
+
+let myResume={
+    "contact_info": {
+        "name": "Sarathraj Srinivasan",
+        "email": "sarath*******@gmail.com",
+        "phone": 1234567890,
+    },
+    "work_experience": [
+        {
+            "overall_experience": "5+ Years",
+        },
+        {
+            "company": "Tata Consultancy Services",
+            "position": "Systems Engineer",
+            "summary": "I am a Front End Developer",
+        },
+        {
+            "company": "Quantum Leap",
+            "position": "Front End Developer",
+            "summary": "I am a Front End Developer",
+        },
+        {
+            "company": "Wipro Limited",
+            "position": "Project Engineer",
+            "summary": "I am a UI Developer",
+        }
+    ],
+    "education": [
+        {
+            "institution": "Thiagarajar College",
+            "department":"IT"
+        },
+        {
+            "institution": "Center for Distance Education, Anna University",
+            "department":"MCA"
+        }
+    ],
+    "technical_skills": [
+        {
+            "skills": "HTML,CSS,JS,Bootstrap,LESS",
+        }
+    ],
+    "other_skills": [
+        {
+            "skills": "UX,Photography,Editing",
+        }
+    ]
+}
+
+console.log(myResume);
+
+var resumeKeys = Object.keys(myResume);
+console.log("keys:",resumeKeys)
+
+var resumeValues = Object.values(myResume);
+console.log("values:",resumeValues)
+
+// for loop
+
+console.log("for loop");
+
+for(let i=0;i<resumeValues.length;i++){
+    console.log(resumeValues[i])
+}
+
+for(let i=0;i<resumeKeys.length;i++){
+    console.log(resumeKeys[i])
+}
+
+// for in
+
+console.log("for...in loop");
+
+
+for(i in resumeKeys){
+    console.log(i, resumeKeys[i]);
+}
+
+// for of
+
+console.log("for...of loop");
+
+for (let value of resumeKeys) {
+    console.log(value);
+}
+
+for (let value of resumeValues) {
+    console.log(value);
+}
+
+// for each
+
+console.log("forEach loop");
+
+resumeKeys.forEach((key, index, myArr) => {
+    console.log(myResume[key], index, myArr);
+})
+  
+resumeValues.forEach((index, myArr) => {
+    console.log(index, myArr);
+})
